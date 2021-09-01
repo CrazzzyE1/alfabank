@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 public class CurrencyControllerRest {
-    private final CurrencyServiceImpl currencyService;
+    private final AppService currencyService;
 
     @GetMapping("/{currency}")
-    public ChangeRate getGif(@PathVariable String currency) {
-        return currencyService.getGif(currency.toUpperCase());
+    public String getGif(@PathVariable String currency) {
+        return "<img src=" + currencyService.getGif(currency.toUpperCase()).getData().get("image_original_url").toString() + ">";
     }
 }

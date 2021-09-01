@@ -6,10 +6,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableFeignClients
-public class AlfabankApplication {
+public class AlfaBankApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(AlfabankApplication.class, args);
+        SpringApplication.run(AlfaBankApplication.class, args);
     }
 
 }
