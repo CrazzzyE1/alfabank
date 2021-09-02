@@ -1,4 +1,4 @@
-package com.litvak.alfabank.client;
+package com.litvak.alfabank.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,7 +10,7 @@ import java.util.Map;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ChangeRate {
+public class ChangeRateEntity {
     private String disclaimer;
     private String license;
     private BigInteger timestamp;
