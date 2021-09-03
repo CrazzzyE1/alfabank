@@ -1,1 +1,1 @@
-web: java -jar target/alfabank-0.0.1-SNAPSHOT.jar -Dserver.port=$PORT
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/alfabank-0.0.1-SNAPSHOT.jar
