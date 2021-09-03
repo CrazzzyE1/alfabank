@@ -7,6 +7,7 @@
 <body>
 <div th:unless="${url}">
     <h3><a href="/currency/AED">Tap this link</a></h3>
+    <h3><a href="/api/v1/AED">REST API</a></h3>
 </div>
 <div th:if="${url}">
     <img th:src="${url}" alt="gif">
