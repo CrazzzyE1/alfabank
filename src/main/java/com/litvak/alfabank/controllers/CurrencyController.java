@@ -1,6 +1,7 @@
 package com.litvak.alfabank.controllers;
 
 import com.litvak.alfabank.services.AppService;
+import com.litvak.alfabank.utils.Cache;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,6 +23,7 @@ public class CurrencyController {
     @GetMapping("/currency/{code}")
     public String getIndexPageWithCurrency(Model model, @PathVariable String code) {
         model.addAttribute("url", currencyService.getGif(code.toUpperCase()).getData().get("image_original_url").toString());
+        model.addAttribute("status", Cache.status);
         return "index";
     }
 }

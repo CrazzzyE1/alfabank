@@ -8,5 +8,6 @@ import java.util.Map;
 
 @Getter
 public class Cache {
+    public static String status = "";
     public static Map<LocalDate, Map<String, Double>> cacheMap = new HashMap<>();
 }

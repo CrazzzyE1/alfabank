@@ -37,13 +37,16 @@ public class AppService {
         Map<String, Double> yesterdayRates = Cache.cacheMap.get(LocalDate.now().minusDays(1));
 
         if (todayRates.get(currency) == null || yesterdayRates.get(currency) == null) {
+            Cache.status = "404";
             return gifService.findGif(OOPS);
         }
 
         if (Double.compare((todayRates.get(currency) / todayRates.get(RUBLE)),
                 (yesterdayRates.get(currency) / yesterdayRates.get(RUBLE))) > 0) {
+            Cache.status = "RICH";
             return gifService.findGif(RICH);
         }
+        Cache.status = "BROKE";
         return gifService.findGif(BROKE);
     }
 }
