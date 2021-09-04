@@ -8,8 +8,6 @@
 - Thymeleaf
 - Lombok
 - Gradle
-- Mockito
-- Junit
 - Deploy to heroku
 
 ## Что делает:
